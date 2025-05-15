@@ -1,5 +1,4 @@
 "use strict";
-//display html form data after submission
 Object.defineProperty(exports, "__esModule", { value: true });
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form');
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(form);
             const name = formData.get('name');
             const email = formData.get('email');
-            const password = formData.get('password');
+            // const password = formData.get('password');
             // Display the form data below the form
             let resultDiv = document.getElementById('form-result');
             if (!resultDiv) {
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>Submitted Data</h2>
                 <p><strong>Name:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Password:</strong> ${password}</p>
             `;
         });
     }
